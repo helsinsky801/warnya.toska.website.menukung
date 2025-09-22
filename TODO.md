@@ -1,0 +1,3 @@
+- [x] Add button to trigger team modal in about.html
+- [x] Add team modal HTML in about.html
+- [x] Style "Tim Kami" title with black color and yellow shadow

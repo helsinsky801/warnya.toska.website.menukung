@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Pesan - Warnya Toska</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Warnya Toska</h1>
+            </div>
+            <div class="menu-overlay"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cara-pesan.html">Cara Pesan</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+                <li><a href="#" id="register-btn">Register</a></li>
+                <li><button class="close-menu">&times;</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Cara Pesan</h2>
+            <p>Selamat datang di halaman cara pesan! Klik tombol di bawah untuk melihat panduan lengkap cara memesan.</p>
+            <button id="open-popup-btn" class="btn popup-trigger-btn">Lihat Cara Pesan & Langkah-Langkah</button>
+        </section>
+
+        <!-- Demo Form -->
+        <h3>Kontak Kami</h3>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Kirim</button>
+        </form>
+
+        <!-- Demo Buttons -->
+        <h3>Notifikasi</h3>
+        <button onclick="window.Notifications.showNotification('Pesan berhasil dikirim!', 'success')">Sukses</button>
+        <button onclick="window.Notifications.showNotification('Terjadi kesalahan!', 'error')">Error</button>
+
+        <!-- Demo Tooltip -->
+        <h3>Fitur <span data-tooltip="Informasi tentang fitur">?</span></h3>
+        <p data-tooltip="Klik untuk informasi lebih lanjut">Pelajari lebih lanjut</p>
+
+        <!-- Demo Date Time -->
+        <h3>Waktu</h3>
+        <div id="datetime-container"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Warnya Toska. Semua hak dilindungi.</p>
+    </footer>
+    <script src="effects.js"></script>
+    <script src="animasi.js"></script>
+    <script src="umak-kudeng-janda-pirang.js"></script>
+    <script src="menu.js"></script>
+    <script src="Reno thaingaku.js"></script>
+    <script src="auth.js"></script>
+    <script src="puqimay.js"></script>
+    <script src="kamparadoh.js"></script>
+    <!-- New JS Files -->
+    <script src="form-validation.js"></script>
+    <script src="analytics.js"></script>
+    <script src="notifications.js"></script>
+    <script src="slider.js"></script>
+    <script src="theme-switcher.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="debounce-throttle.js"></script>
+    <script src="modal-handler.js"></script>
+    <script src="tooltip.js"></script>
+    <script src="date-time.js"></script>
+    <script src="init-new-features.js"></script>
+    <script src="goblok-lazyload.js"></script>
+    <script src="ngacir-gallery.js"></script>
+    <script src="ngentot-countdown.js"></script>
+    <script src="bego-carousel.js"></script>
+    <script src="cupu-tooltip.js"></script>
+    <script src="alay-modal.js"></script>
+    <script src="receh-scrollspy.js"></script>
+    <script src="gaje-debounce.js"></script>
+    <script src="lebay-throttle.js"></script>
+    <script src="ciyus-notify.js"></script>
+    <script src="woles-accordion.js"></script>
+    <script src="jomblo-tabs.js"></script>
+    <script src="additional-js/arrayUtils.js"></script>
+    <script src="additional-js/stringUtils.js"></script>
+    <script src="additional-js/dateUtils.js"></script>
+    <script src="additional-js/numberUtils.js"></script>
+    <script src="additional-js/storageUtils.js"></script>
+    <script src="additional-js/domUtils.js"></script>
+    <script src="additional-js/eventUtils.js"></script>
+    <script src="additional-js/mathUtils.js"></script>
+    <script src="additional-js/validationUtils.js"></script>
+    <script src="additional-js/fetchUtils.js"></script>
+    <script src="additional-js/logger.js"></script>
+    <script src="additional-js/timerUtils.js"></script>
+    <script>
+        document.getElementById('open-popup-btn').addEventListener('click', function() {
+            window.openCaraPesanPopup();
+        });
+
+        // Initialize demo features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize date-time display
+            const dateTimeUtils = new window.DateTimeUtils();
+            dateTimeUtils.createLiveClock('datetime-container');
+
+            // Initialize analytics
+            window.Analytics.initAnalyticsTracking();
+
+            // Form validation
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (window.FormValidation.validateForm(this, {
+                        name: { required: true },
+                        email: { required: true, email: true }
+                    })) {
+                        window.Notifications.showNotification('Form berhasil dikirim!', 'success');
+                        this.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
